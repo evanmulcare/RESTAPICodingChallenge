@@ -26,7 +26,7 @@ const App = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const result = await axios.get('/api');
+        const result = await axios.get('https://restapicodingchallenge-backend.onrender.com/api');
         setBackendData(result.data)
         setFilteredCountries(result.data.countries);
       } catch (error) {
@@ -41,7 +41,7 @@ const App = () => {
     async function fetchRegionData() {
       if (selectedRegion) {
         try {
-          const result = await axios.get(`/api/region/${selectedRegion}`);
+          const result = await axios.get(`https://restapicodingchallenge-backend.onrender.com/api/region/${selectedRegion}`);
           setBackendData(result.data)
           setFilteredCountries(result.data.countries);
         } catch (error) {
