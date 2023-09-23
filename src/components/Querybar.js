@@ -15,7 +15,7 @@ const Querybar = ({ selectedRegion, setFilteredCountries }) => {
 
 
   const handleClick = async (subregion) => {
-    const response = await axios.get(`/api/subregion/${subregion}`);
+    const response = await axios.get(`https://restapicodingchallenge-backend.onrender.com/api/subregion/${subregion}`);
     setFilteredCountries(response.data.countries);
   };
 
@@ -26,7 +26,7 @@ const Querybar = ({ selectedRegion, setFilteredCountries }) => {
 
   const handleTitleClick = async () => {
     if (selectedRegion) {
-      const response = await axios.get(`/api/region/${selectedRegion}`);
+      const response = await axios.get(`https://restapicodingchallenge-backend.onrender.com/api/region/${selectedRegion}`);
       setFilteredCountries(response.data.countries);
     }
     setActiveButton('all');    

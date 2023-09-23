@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BsSearch, BsFilterRight } from 'react-icons/bs';
-import BounceLogo from '../public/images/BounceLogo.svg'
 
 
 const Searchbar = ({
